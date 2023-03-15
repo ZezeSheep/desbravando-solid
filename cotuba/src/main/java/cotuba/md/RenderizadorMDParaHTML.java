@@ -16,13 +16,12 @@ import org.commonmark.parser.Parser;
 import org.commonmark.renderer.html.HtmlRenderer;
 import org.springframework.stereotype.Component;
 
-import cotuba.application.RenderizadorMDParaHTML;
 import cotuba.domain.Capitulo;
 
 @Component
-public class RenderizadorMDParaHTMLComCommonMark implements RenderizadorMDParaHTML {
+public class RenderizadorMDParaHTML {
 
-    @Override
+    
     public List<Capitulo> renderiza(Path diretorioDosMD) {
 
         return obtemArquivosMD(diretorioDosMD).stream()

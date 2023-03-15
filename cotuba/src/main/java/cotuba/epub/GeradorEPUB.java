@@ -6,7 +6,7 @@ import java.nio.file.Path;
 
 import org.springframework.stereotype.Component;
 
-import cotuba.application.GeradorEPUB;
+import cotuba.application.GeradorEbook;
 import cotuba.domain.Capitulo;
 import cotuba.domain.Ebook;
 import nl.siegmann.epublib.domain.Book;
@@ -15,7 +15,7 @@ import nl.siegmann.epublib.epub.EpubWriter;
 import nl.siegmann.epublib.service.MediatypeService;
 
 @Component
-public class GeradorEPUBComEpublic implements GeradorEPUB {
+public class GeradorEPUB implements GeradorEbook {
 
     @Override
     public void gera(Ebook ebook) {

@@ -17,6 +17,7 @@ import org.commonmark.renderer.html.HtmlRenderer;
 import org.springframework.stereotype.Component;
 
 import cotuba.domain.Capitulo;
+import cotuba.plugin.Plugin;
 
 @Component
 public class RenderizadorMDParaHTML {
@@ -53,6 +54,8 @@ public class RenderizadorMDParaHTML {
             String html = renderer.render(document);
 
             capitulo.setConteudoHTML(html);
+
+            Plugin.renderizou(capitulo);
 
         } catch (Exception ex) {
             throw new IllegalStateException("Erro ao renderizar para HTML o arquivo " + arquivoMD,

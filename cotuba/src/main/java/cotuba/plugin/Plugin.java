@@ -20,4 +20,11 @@ public interface Plugin {
         });
         
     }
+
+    static void gerou(Ebook ebook) {
+        ServiceLoader.load(Plugin.class)
+        .forEach(plugin -> {
+            plugin.aposGeracao(ebook);
+        });
+    }
 }

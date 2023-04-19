@@ -3,16 +3,13 @@ package cotuba.plugin;
 import java.util.ServiceLoader;
 
 import cotuba.domain.Capitulo;
-import cotuba.domain.Ebook;
 
-public interface Plugin {
-    
+public interface AoRenderizarHTML {
+
     String aposRenderizacao(String html);
 
-    void aposGeracao(Ebook ebook);
-
     static void renderizou(Capitulo capitulo){
-        ServiceLoader.load(Plugin.class)
+        ServiceLoader.load(AoRenderizarHTML.class)
         .forEach(plugin -> {
             String html = capitulo.getConteudoHTML();
             String htmlModificado = plugin.aposRenderizacao(html);
@@ -20,11 +17,5 @@ public interface Plugin {
         });
         
     }
-
-    static void gerou(Ebook ebook) {
-        ServiceLoader.load(Plugin.class)
-        .forEach(plugin -> {
-            plugin.aposGeracao(ebook);
-        });
-    }
+    
 }

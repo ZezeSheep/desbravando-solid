@@ -3,10 +3,9 @@ package br.com.paradizo.tema;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-import cotuba.domain.Ebook;
-import cotuba.plugin.Plugin;
+import cotuba.plugin.AoRenderizarHTML;
 
-public class TemaParadizo implements Plugin {
+public class TemaParadizo implements AoRenderizarHTML {
 
     private String aplicaTema(String html){
         Document document = Jsoup.parse(html);
@@ -18,10 +17,6 @@ public class TemaParadizo implements Plugin {
 
     private String cssDoTema(){
         return FileUtils.getResourceContents("/tema.css");
-    }
-
-    @Override
-    public void aposGeracao(Ebook ebook) {
     }
 
     @Override

@@ -9,9 +9,9 @@ import org.jsoup.nodes.Document;
 
 import cotuba.domain.Capitulo;
 import cotuba.domain.Ebook;
-import cotuba.plugin.Plugin;
+import cotuba.plugin.AoFinalizarGeracao;
 
-public class CalculadoraDeEstatisticas implements Plugin {
+public class CalculadoraDeEstatisticas implements AoFinalizarGeracao {
 
     @Override
     public void aposGeracao(Ebook ebook) {
@@ -44,11 +44,6 @@ public class CalculadoraDeEstatisticas implements Plugin {
                 System.out.println(palavra + ": " + ocorrencias);
             }
         }
-    }
-
-    @Override
-    public String aposRenderizacao(String arg0) {
-        return arg0;
     }
     
 }

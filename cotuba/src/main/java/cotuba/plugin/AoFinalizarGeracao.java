@@ -2,13 +2,11 @@ package cotuba.plugin;
 
 import java.util.ServiceLoader;
 
-import cotuba.domain.Ebook;
-
 public interface AoFinalizarGeracao {
 
-    void aposGeracao(Ebook ebook);
+    void aposGeracao(EbookSoParaLeitura ebook);
 
-    static void gerou(Ebook ebook) {
+    static void gerou(EbookSoParaLeitura ebook) {
         ServiceLoader.load(AoFinalizarGeracao.class)
         .forEach(plugin -> {
             plugin.aposGeracao(ebook);

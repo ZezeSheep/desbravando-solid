@@ -3,7 +3,9 @@ package cotuba.domain;
 import java.nio.file.Path;
 import java.util.List;
 
-public class Ebook {
+import cotuba.plugin.EbookSoParaLeitura;
+
+public class Ebook implements EbookSoParaLeitura {
 
     private FormatoEbook formato;
 
@@ -38,5 +40,6 @@ public class Ebook {
     public boolean isUltimoCapitulo(Capitulo capitulo){
         return this.capitulos.get(this.capitulos.size()-1).equals(capitulo);
     }
-    
+
+
 }

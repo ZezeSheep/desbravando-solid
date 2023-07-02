@@ -4,9 +4,8 @@ import java.nio.file.Path;
 import java.util.Collections;
 import java.util.List;
 
-import cotuba.plugin.EbookSoParaLeitura;
 
-public final class Ebook implements EbookSoParaLeitura {
+public final class Ebook {
 
     private final FormatoEbook formato;
 

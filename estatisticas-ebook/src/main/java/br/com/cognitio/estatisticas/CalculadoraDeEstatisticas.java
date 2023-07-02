@@ -6,18 +6,19 @@ import java.util.Map;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
+import cotuba.domain.Capitulo;
+import cotuba.domain.Ebook;
 import cotuba.plugin.AoFinalizarGeracao;
-import cotuba.plugin.CapituloSoParaLeitura;
-import cotuba.plugin.EbookSoParaLeitura;
+
 
 public class CalculadoraDeEstatisticas implements AoFinalizarGeracao {
 
     @Override
-    public void aposGeracao(EbookSoParaLeitura ebook) {
+    public void aposGeracao(Ebook ebook) {
 
         ContagemDePalavras contagemDePalavras = new ContagemDePalavras();
 
-        for(CapituloSoParaLeitura capitulo : ebook.getCapitulos()){
+        for(Capitulo capitulo : ebook.getCapitulos()){
             String html = capitulo.getConteudoHTML();
             Document document = Jsoup.parse(html);
             String textoDoCapitulo = document.body().text();

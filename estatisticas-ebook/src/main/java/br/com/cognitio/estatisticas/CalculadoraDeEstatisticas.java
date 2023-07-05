@@ -2,6 +2,7 @@ package br.com.cognitio.estatisticas;
 
 import java.text.Normalizer;
 import java.text.Normalizer.Form;
+import java.util.Iterator;
 import java.util.Map;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -18,8 +19,8 @@ public class CalculadoraDeEstatisticas implements AoFinalizarGeracao {
 
         ContagemDePalavras contagemDePalavras = new ContagemDePalavras();
 
-        for(Capitulo capitulo : ebook.getCapitulos()){
-            String html = capitulo.getConteudoHTML();
+        for(Capitulo capitulo : ebook.capitulos()){
+            String html = capitulo.conteudoHTML();
             Document document = Jsoup.parse(html);
             String textoDoCapitulo = document.body().text();
             
@@ -36,10 +37,9 @@ public class CalculadoraDeEstatisticas implements AoFinalizarGeracao {
                 contagemDePalavras.adicionaPalavra(emMaiusculas);
             }
 
-            for(Map.Entry<String, Integer> contagem : contagemDePalavras.entrySet()){
-                String palavra = contagem.getKey();
-                Integer ocorrencias = contagem.getValue();
-                System.out.println(palavra + ": " + ocorrencias);
+
+            for(ContagemDePalavras.Contagem contagem : contagemDePalavras){
+                System.out.println(contagem.palavra() + ": " + contagem.ocorrencias());
             }
         }
     }

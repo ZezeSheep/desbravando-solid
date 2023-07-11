@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>S.O.L.I.D.</title>
+  </head>
+  <body>
+    <h1>S.O.L.I.D.</h1>
+<h2>Os dez (ou onze) mandamentos de Orientação a Objetos</h2>
+<p>Robert Cecil Martin, o famoso Uncle Bob, listou os seus 10 (na verdade, 11) mandamentos da Programação Orientada a Objetos, no grupo Usenet <em>comp.object</em> (MARTIN, 1995):</p>
+<blockquote>
+<p><em>If I had to write commandments, these would be candidates.</em></p>
+<p>1.<em>Software entities (classes, modules, etc) should be open for extension, but closed for modification.  (The open/closed principle -- Bertrand Meyer)</em></p>
+<p>2.<em>Derived classes must usable through the base class interface without the need for the user to know the difference.  (The Liskov Substitution Principle)</em></p>
+<p>3.<em>Details should depend upon abstractions.  Abstractions should not depend upon details.  (Principle of Dependency Inversion)</em></p>
+<p>4.<em>The granule of reuse is the same as the granule of release. Only components that are released through a tracking system can be effectively reused.</em></p>
+<p><em>5.Classes within a released component should share common closure. That is, if one needs to be changed, they all are likely to need to be changed.  What affects one, affects all.</em></p>
+<p>6.<em>Classes within a released component should be reused together. That is, it is impossible to separate the components from each other in order to reuse less than the total.</em></p>
+<p>7.<em>The dependency structure for released components must be a DAG. There can be no cycles.</em></p>
+<p>8.<em>Dependencies between released components must run in the direction of stability. The dependee must be more stable than the depender.</em></p>
+<p>9.<em>The more stable a released component is, the more it must consist of abstract classes. A completely stable component should consist of nothing but abstract classes.</em></p>
+<p>10.<em>Where possible, use proven patterns to solve design problems.</em></p>
+<p>11.<em>When crossing between two different paradigms, build an interface layer that separates the two. Don't pollute one side with the paradigm of the other.</em></p>
+</blockquote>
+<h2>Os Princípios de Orientação a Objetos</h2>
+<p>Em 1996, fez uma série de artigos na revista <em>C++ Report</em> sobre o que chamou de <strong>princípios</strong>:</p>
+<ul>
+<li><em>Open-Closed Principle</em> (MARTIN, 1996a)</li>
+<li><em>Liskov Substitution Principle</em> (MARTIN, 1996b)</li>
+<li><em>Dependency Inversion Principle</em> (MARTIN, 1996c)</li>
+<li><em>Interface Segregation Principle</em> (MARTIN, 1996d)</li>
+<li><em>Granularity</em> (MARTIN, 1996e)</li>
+<li><em>Stability</em> (MARTIN, 1997)</li>
+</ul>
+<p>O foco desses princípios é nas dependências entre objetos e componentes/módulos.</p>
+<p>Em (Martin, 2002), Uncle Bob descreve o <em>Single Responsibility Principle</em>, reordenando os princípios e cunhando o acrônimo <strong>S.O.L.I.D</strong>.</p>
+<p>Uma versão atualizada desses princípios foi lançada em C# (MARTIN, 2006).</p>
+<p>Uncle Bob indica (MARTIN, 2009) que os princípios não são <em>check lists</em>, nem leis ou regras. São bons conselhos vindos do senso comum de gente experiente, coletados em projetos reais ao longo do tempo. Não significa que sempre funcionam ou que sempre devem ser seguidos.</p>
+<h2>Princípios de classes</h2>
+<p>Os 5 princípios S.O.L.I.D. são focados em modelagem de classes:</p>
+<ul>
+<li><em><strong>S</strong>ingle Responsibility Principle</em>: <strong>Uma classe deve ter um, e apenas um, motivo para ser mudada</strong>.</li>
+<li><em><strong>O</strong>pen/Closed Principle</em>: <strong>Deve ser possível extender o comportamento de uma classe sem modificá-la</strong>.</li>
+<li><em><strong>L</strong>iskov Substitution Principle</em>: <strong>Classes derivadas devem ser substituíveis pelas classes base</strong>.</li>
+<li><em><strong>I</strong>nterface Segregation Principle</em>: <strong>Uma classe deve ter um, e apenas um, motivo para ser mudada</strong>.</li>
+<li><em><strong>D</strong>ependency Inversion Principle</em>: <strong>Dependa de abstrações, não de classes concretas</strong>.</li>
+</ul>
+
+  </body>
+</html>

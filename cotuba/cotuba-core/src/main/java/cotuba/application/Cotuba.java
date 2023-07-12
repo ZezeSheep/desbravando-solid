@@ -10,6 +10,7 @@ import cotuba.domain.Ebook;
 import cotuba.domain.FormatoEbook;
 import cotuba.md.RenderizadorMDParaHTML;
 import cotuba.plugin.AoFinalizarGeracao;
+import cotuba.plugin.GeradorEbook;
 
 @Component
 public class Cotuba {

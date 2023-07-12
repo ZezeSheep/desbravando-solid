@@ -5,6 +5,12 @@
     <file url="file://$PROJECT_DIR$/cotuba-cli/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cotuba-core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cotuba-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cotuba-epub/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cotuba-epub/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cotuba-html/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cotuba-html/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cotuba-pdf/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cotuba-pdf/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

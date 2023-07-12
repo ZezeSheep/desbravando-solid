@@ -5,7 +5,8 @@ import java.util.Collections;
 import java.util.List;
 
 
-public record Ebook(FormatoEbook formato, Path arquivoDeSaida, List<Capitulo> capitulos) {
+public record
+Ebook(FormatoEbook formato, Path arquivoDeSaida, List<Capitulo> capitulos) {
 
     public Ebook{
         capitulos = Collections.unmodifiableList(capitulos);

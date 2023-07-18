@@ -16,6 +16,7 @@ import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
 import cotuba.application.ParametrosCotuba;
+import cotuba.application.RepositorioDeMDs;
 import cotuba.domain.FormatoEbook;
 
 class LeitorOpcoesCLI implements ParametrosCotuba {
@@ -133,6 +134,11 @@ class LeitorOpcoesCLI implements ParametrosCotuba {
 
     public boolean isModoVerboso() {
         return modoVerboso;
+    }
+
+    @Override
+    public RepositorioDeMDs getRepositorioDeMDs() {
+        return new MDsDoDiretorio(diretorioDosMD);
     }
 
 }
